@@ -10,9 +10,6 @@ export const getProducts = async (): Promise<Product[]> => {
 
   return products.map((product, index) => ({
     ...product,
-    image: new URL(
-      `../assets/img${index === 0 ? "" : ` (${index})`}.jpg`,
-      import.meta.url,
-    ).href,
+    image: `./assets/img${index === 0 ? "" : ` (${index})`}.jpg`,
   }));
 };
